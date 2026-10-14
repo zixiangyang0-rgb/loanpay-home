@@ -32,6 +32,9 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  other: {
+    "google-adsense-account": "ca-pub-4906207495792820",
+  },
 };
 
 const NAV = [
@@ -96,7 +99,13 @@ export default function RootLayout({
               General education only; hire a licensed pro for electrical, gas, and
               structural work.
             </p>
-            <p>© 2026 LoanPay Home. All rights reserved.</p>
+            <p>
+              © 2026 LoanPay Home. All rights reserved. Part of{" "}
+              <a href="https://loanpaylogic.com">LoanPay Logic Mortgage &amp; Home Tools</a> ·{" "}
+              <a href="https://insurance.loanpaylogic.com">Home Insurance</a> ·{" "}
+              <a href="https://food.loanpaylogic.com">Kitchen</a> ·{" "}
+              <a href="https://tech.loanpaylogic.com">Smart Tech</a>.
+            </p>
           </div>
         </footer>
       </body>

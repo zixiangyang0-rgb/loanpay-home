@@ -147,7 +147,7 @@ export default function Page() {
         faqs={faqs}
         outboundLinks={[
           { href: "https://www.epa.gov/watersense", label: "EPA WaterSense outdoor watering" },
-          { href: "https://www.cpsc.gov", label: "CPSC mower safety guidance" },
+          { href: "https://www.familyhandyman.com/", label: "Family Handyman lawn care guides" },
         ]}
         internalLinks={[
           { href: "/spring-home-maintenance-checklist", label: "spring checklist" },

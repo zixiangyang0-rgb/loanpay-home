@@ -148,7 +148,7 @@ export default function Page() {
         faqs={faqs}
         outboundLinks={[
           { href: "https://www.epa.gov/lead", label: "EPA renovation safety for older kitchens" },
-          { href: "https://www.cpsc.gov", label: "CPSC home safety guidance" },
+          { href: "https://www.familyhandyman.com/", label: "Family Handyman tiling guides" },
         ]}
         internalLinks={[
           { href: "/caulking-guide", label: "caulking guide" },

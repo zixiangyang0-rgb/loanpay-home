@@ -141,7 +141,7 @@ export default function Page() {
         faqs={faqs}
         outboundLinks={[
           { href: "https://www.epa.gov/watersense", label: "EPA WaterSense efficiency" },
-          { href: "https://www.cpsc.gov", label: "CPSC home safety guidance" },
+          { href: "https://www.familyhandyman.com/", label: "Family Handyman faucet guides" },
         ]}
         internalLinks={[
           { href: "/unclog-drain-guide", label: "unclog drain guide" },

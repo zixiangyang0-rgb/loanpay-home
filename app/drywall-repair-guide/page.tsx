@@ -142,7 +142,7 @@ export default function Page() {
         faqs={faqs}
         outboundLinks={[
           { href: "https://www.epa.gov/lead", label: "EPA lead-safe work practices" },
-          { href: "https://www.cpsc.gov", label: "CPSC home safety guidance" },
+          { href: "https://www.thisoldhouse.com/", label: "This Old House drywall guides" },
         ]}
         internalLinks={[
           { href: "/painting-room-guide", label: "painting a room guide" },

@@ -150,7 +150,7 @@ export default function Page() {
         faqs={faqs}
         outboundLinks={[
           { href: "https://www.epa.gov/safepestcontrol", label: "EPA safe pest control guidance" },
-          { href: "https://www.cpsc.gov", label: "CPSC pesticide safety resources" },
+          { href: "https://www.familyhandyman.com/", label: "Family Handyman pest guides" },
         ]}
         internalLinks={[
           { href: "/weatherproofing-windows-doors", label: "weatherproofing windows and doors" },

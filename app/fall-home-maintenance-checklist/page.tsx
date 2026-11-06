@@ -149,7 +149,7 @@ export default function Page() {
         faqs={faqs}
         outboundLinks={[
           { href: "https://www.energy.gov/energysaver", label: "DOE winterization guidance" },
-          { href: "https://www.cpsc.gov", label: "CPSC heating safety" },
+          { href: "https://www.thisoldhouse.com/", label: "This Old House fall maintenance guides" },
         ]}
         internalLinks={[
           { href: "/spring-home-maintenance-checklist", label: "spring checklist" },

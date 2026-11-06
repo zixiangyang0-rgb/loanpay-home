@@ -148,7 +148,7 @@ export default function Page() {
         faqs={faqs}
         outboundLinks={[
           { href: "https://www.cpsc.gov", label: "CPSC tip-over anchoring safety" },
-          { href: "https://www.epa.gov/recycle", label: "EPA donation and reuse guidance" },
+          { href: "https://www.familyhandyman.com/", label: "Family Handyman closet guides" },
         ]}
         internalLinks={[
           { href: "/garage-organization-guide", label: "garage organization guide" },

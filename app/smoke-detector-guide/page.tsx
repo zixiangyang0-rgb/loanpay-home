@@ -150,7 +150,7 @@ export default function Page() {
         faqs={faqs}
         outboundLinks={[
           { href: "https://www.cpsc.gov", label: "CPSC smoke alarm guidance" },
-          { href: "https://www.nfpa.org", label: "NFPA alarm recommendations" },
+          { href: "https://www.familyhandyman.com/", label: "Family Handyman smoke alarm guides" },
         ]}
         internalLinks={[
           { href: "/outlet-replacement-safety-guide", label: "outlet safety guide" },

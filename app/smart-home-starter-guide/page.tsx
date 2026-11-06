@@ -148,8 +148,8 @@ export default function Page() {
         stepsHeading="How do you start a smart home in 7 steps?"
         faqs={faqs}
         outboundLinks={[
-          { href: "https://www.esfi.org", label: "ESFI smart-device electrical safety" },
           { href: "https://www.cpsc.gov", label: "CPSC connected-device resources" },
+          { href: "https://www.thisoldhouse.com/", label: "This Old House smart home guides" },
         ]}
         internalLinks={[
           { href: "/outlet-replacement-safety-guide", label: "outlet safety guide" },

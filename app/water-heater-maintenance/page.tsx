@@ -142,7 +142,7 @@ export default function Page() {
         faqs={faqs}
         outboundLinks={[
           { href: "https://www.energy.gov/energysaver", label: "DOE water-heating guidance" },
-          { href: "https://www.cpsc.gov", label: "CPSC scald-prevention data" },
+          { href: "https://www.thisoldhouse.com/", label: "This Old House water heater guides" },
         ]}
         internalLinks={[
           { href: "/hvac-filter-guide", label: "HVAC filter guide" },

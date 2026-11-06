@@ -148,8 +148,8 @@ export default function Page() {
         stepsHeading="How do you style a rental in 7 steps?"
         faqs={faqs}
         outboundLinks={[
-          { href: "https://www.hud.gov", label: "HUD tenant rights resources" },
-          { href: "https://www.ftc.gov", label: "FTC consumer guidance" },
+          { href: "https://www.cpsc.gov", label: "CPSC renter home safety" },
+          { href: "https://www.familyhandyman.com/", label: "Family Handyman renter-friendly guides" },
         ]}
         internalLinks={[
           { href: "/furniture-assembly-tips", label: "furniture assembly tips" },

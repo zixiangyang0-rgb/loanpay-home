@@ -141,7 +141,7 @@ export default function Page() {
         faqs={faqs}
         outboundLinks={[
           { href: "https://www.epa.gov/mold", label: "EPA moisture and mold control" },
-          { href: "https://www.energy.gov/energysaver", label: "DOE air-sealing guidance" },
+          { href: "https://www.familyhandyman.com/", label: "Family Handyman caulking guides" },
         ]}
         internalLinks={[
           { href: "/painting-room-guide", label: "painting a room guide" },

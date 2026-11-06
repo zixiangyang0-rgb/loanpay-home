@@ -149,8 +149,8 @@ export default function Page() {
         stepsHeading="How do you clean gutters in 7 steps?"
         faqs={faqs}
         outboundLinks={[
-          { href: "https://www.cpsc.gov", label: "CPSC ladder safety guidance" },
           { href: "https://www.epa.gov/mold", label: "EPA moisture protection advice" },
+          { href: "https://www.thisoldhouse.com/", label: "This Old House gutter guides" },
         ]}
         internalLinks={[
           { href: "/fall-home-maintenance-checklist", label: "fall checklist" },

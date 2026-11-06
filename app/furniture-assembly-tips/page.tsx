@@ -155,7 +155,7 @@ export default function Page() {
         faqs={faqs}
         outboundLinks={[
           { href: "https://www.cpsc.gov", label: "CPSC furniture tip-over prevention" },
-          { href: "https://www.esfi.org", label: "ESFI tool and ladder safety" },
+          { href: "https://www.familyhandyman.com/", label: "Family Handyman furniture guides" },
         ]}
         internalLinks={[
           { href: "/power-drill-basics", label: "power drill basics" },

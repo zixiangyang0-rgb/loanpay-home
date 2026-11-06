@@ -148,7 +148,7 @@ export default function Page() {
         faqs={faqs}
         outboundLinks={[
           { href: "https://www.energy.gov/energysaver", label: "DOE spring efficiency tips" },
-          { href: "https://www.epa.gov/mold", label: "EPA moisture guidance" },
+          { href: "https://www.thisoldhouse.com/", label: "This Old House spring maintenance guides" },
         ]}
         internalLinks={[
           { href: "/fall-home-maintenance-checklist", label: "fall checklist" },

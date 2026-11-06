@@ -159,8 +159,8 @@ export default function Page() {
         stepsHeading="How do you price and book a move in 7 steps?"
         faqs={faqs}
         outboundLinks={[
-          { href: "https://www.fmcsa.dot.gov/protect-your-move", label: "FMCSA Protect Your Move" },
-          { href: "https://www.usps.com", label: "USPS change of address" },
+          { href: "https://www.cpsc.gov", label: "CPSC moving home safety" },
+          { href: "https://www.thisoldhouse.com/", label: "This Old House moving guides" },
         ]}
         internalLinks={[
           { href: "/moving-house-checklist", label: "moving house checklist" },

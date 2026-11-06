@@ -150,7 +150,7 @@ export default function Page() {
         faqs={faqs}
         outboundLinks={[
           { href: "https://www.energy.gov/energysaver", label: "DOE heating and cooling tips" },
-          { href: "https://www.energystar.gov", label: "ENERGY STAR maintenance advice" },
+          { href: "https://www.thisoldhouse.com/", label: "This Old House HVAC guides" },
         ]}
         internalLinks={[
           { href: "/water-heater-maintenance", label: "water-heater maintenance" },

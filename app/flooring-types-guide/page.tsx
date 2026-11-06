@@ -151,7 +151,7 @@ export default function Page() {
         faqs={faqs}
         outboundLinks={[
           { href: "https://www.epa.gov/mold", label: "EPA moisture and flooring guidance" },
-          { href: "https://www.cpsc.gov", label: "CPSC slip and trip safety" },
+          { href: "https://www.familyhandyman.com/", label: "Family Handyman flooring guides" },
         ]}
         internalLinks={[
           { href: "/tile-backsplash-guide", label: "tile backsplash guide" },

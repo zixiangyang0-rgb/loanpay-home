@@ -142,7 +142,7 @@ export default function Page() {
         faqs={faqs}
         outboundLinks={[
           { href: "https://www.cpsc.gov", label: "CPSC home wiring hazards guide" },
-          { href: "https://www.esfi.org", label: "ESFI DIY electrical safety" },
+          { href: "https://www.familyhandyman.com/", label: "Family Handyman electrical guides" },
         ]}
         internalLinks={[
           { href: "/smoke-detector-guide", label: "smoke detector guide" },

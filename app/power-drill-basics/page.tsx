@@ -150,8 +150,8 @@ export default function Page() {
         stepsHeading="How do you drill a clean hole in 8 steps?"
         faqs={faqs}
         outboundLinks={[
-          { href: "https://www.esfi.org", label: "ESFI DIY electrical safety" },
           { href: "https://www.cpsc.gov", label: "CPSC home safety checklists" },
+          { href: "https://www.familyhandyman.com/", label: "Family Handyman power drill guides" },
         ]}
         internalLinks={[
           { href: "/hanging-shelves-guide", label: "hanging shelves guide" },

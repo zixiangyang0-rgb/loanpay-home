@@ -147,8 +147,8 @@ export default function Page() {
         stepsHeading="How do you move in 7 steps?"
         faqs={faqs}
         outboundLinks={[
-          { href: "https://www.fmcsa.dot.gov/protect-your-move", label: "FMCSA Protect Your Move" },
-          { href: "https://www.usps.com", label: "USPS change of address" },
+          { href: "https://www.cpsc.gov", label: "CPSC moving home safety" },
+          { href: "https://www.familyhandyman.com/", label: "Family Handyman moving guides" },
         ]}
         internalLinks={[
           { href: "/closet-organization-guide", label: "closet organization guide" },

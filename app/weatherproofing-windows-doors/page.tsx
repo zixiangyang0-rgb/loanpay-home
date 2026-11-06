@@ -150,7 +150,7 @@ export default function Page() {
         faqs={faqs}
         outboundLinks={[
           { href: "https://www.energy.gov/energysaver", label: "DOE air-sealing guidance" },
-          { href: "https://www.energystar.gov", label: "ENERGY STAR window advice" },
+          { href: "https://www.thisoldhouse.com/", label: "This Old House weatherproofing guides" },
         ]}
         internalLinks={[
           { href: "/caulking-guide", label: "caulking guide" },

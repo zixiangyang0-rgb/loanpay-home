@@ -147,8 +147,8 @@ export default function Page() {
         stepsHeading="How do you organize a garage in 7 steps?"
         faqs={faqs}
         outboundLinks={[
-          { href: "https://www.cpsc.gov", label: "CPSC garage and workshop safety" },
           { href: "https://www.epa.gov/hw", label: "EPA household hazardous waste" },
+          { href: "https://www.familyhandyman.com/", label: "Family Handyman garage guides" },
         ]}
         internalLinks={[
           { href: "/closet-organization-guide", label: "closet organization guide" },

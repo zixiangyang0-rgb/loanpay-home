@@ -159,7 +159,7 @@ export default function Page() {
         faqs={faqs}
         outboundLinks={[
           { href: "https://www.epa.gov/lead", label: "EPA lead-safe renovation rules" },
-          { href: "https://www.cpsc.gov", label: "CPSC home safety guidance" },
+          { href: "https://www.thisoldhouse.com/", label: "This Old House painting guides" },
         ]}
         internalLinks={[
           { href: "/drywall-repair-guide", label: "drywall repair guide" },

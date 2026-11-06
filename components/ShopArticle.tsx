@@ -142,17 +142,18 @@ export default function ShopArticle({
         {closing.map((p, i) => (
           <p key={i}>{p}</p>
         ))}
-        <p>
+        <div className="official-box" role="note" aria-label="Official guidance">
+          <strong>Official guidance. </strong>
           Authoritative references consulted for this guide:{" "}
           {outboundLinks.map((l, i) => (
             <span key={l.href}>
-              <a href={l.href} rel="noopener noreferrer">
+              <a href={l.href} target="_blank" rel="noopener noreferrer">
                 {l.label}
               </a>
               {i < outboundLinks.length - 1 ? " · " : "."}
             </span>
           ))}
-        </p>
+        </div>
         <div className="faq-block">
           <h2>What do readers ask about this project?</h2>
           {faqs.map((f, i) => (

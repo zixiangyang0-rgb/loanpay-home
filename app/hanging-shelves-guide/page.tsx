@@ -143,7 +143,7 @@ export default function Page() {
         faqs={faqs}
         outboundLinks={[
           { href: "https://www.cpsc.gov", label: "CPSC anchoring and tip-over safety" },
-          { href: "https://www.esfi.org", label: "ESFI wall-scanning electrical safety" },
+          { href: "https://www.familyhandyman.com/", label: "Family Handyman shelving guides" },
         ]}
         internalLinks={[
           { href: "/power-drill-basics", label: "power drill basics" },

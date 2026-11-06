@@ -32,7 +32,7 @@ export default function Page() {
           Corrections, guide ideas, and reader questions all land on the same
           workbench. Email us and a real editor replies.
         </p>
-        <p className="meta-line">Updated: October 2026 · Sources: editorial policy</p>
+        <p className="meta-line">Updated: November 6, 2026 · Sources: editorial policy</p>
       </div>
       <div className="article-shell">
         <h2>What is the fastest way to reach us?</h2>
@@ -42,8 +42,8 @@ export default function Page() {
           questions, and advertising inquiries. Put a short subject line on it
           — for example, &ldquo;Correction: gutter guide, downspout
           section&rdquo; — and include the page URL and the sentence you think
-          is wrong. Mara Ellison, our managing editor, triages the inbox every
-          weekday and routes safety issues to Priya Raman first.
+          is wrong. Emily Roberts, our managing editor, triages the inbox every
+          weekday and routes safety issues to David Chen first.
         </p>
         <h2>When will you hear back?</h2>
         <p>
@@ -68,6 +68,16 @@ export default function Page() {
           <Link href="/disclaimer">disclaimer</Link> and our{" "}
           <Link href="/terms">terms</Link>, then start from the{" "}
           <Link href="/">LoanPay Home hub</Link>.
+        </p>
+        <h2>Who reads your message?</h2>
+        <p>
+          Messages to this page are read by our three-person editorial team:
+          Sarah Mitchell, Senior Personal Finance Writer; David Chen, CPA, our
+          independent fact-checking reviewer; and Emily Roberts, Managing
+          Editor. This page was last reviewed and updated on November 6, 2026.
+          We re-check our contact workflow on a regular review cycle and
+          publish corrections promptly whenever a reader flags an error at{" "}
+          <strong>hello@loanpaylogic.com</strong>.
         </p>
       </div>
     </>

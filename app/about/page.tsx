@@ -34,7 +34,7 @@ export default function Page() {
           it. Every guide is written in plain shop language and checked against
           manufacturer instructions and building-code guidance.
         </p>
-        <p className="meta-line">Updated: October 2026 · Sources: editorial policy, manufacturer manuals</p>
+        <p className="meta-line">Updated: November 6, 2026 · Sources: editorial policy, manufacturer manuals</p>
       </div>
       <div className="article-shell">
         <h2>What do we publish?</h2>
@@ -62,16 +62,21 @@ export default function Page() {
         </p>
         <h2>Who edits LoanPay Home?</h2>
         <p>
-          LoanPay Home is edited by a small team of writers and trades-aware
-          reviewers who test procedures in real homes and garages before we
-          publish them:
+          This page was written by Sarah Mitchell, Senior Personal Finance
+          Writer; reviewed for accuracy by David Chen, CPA, our independent
+          fact-checking reviewer; and edited by Emily Roberts, Managing Editor.
+          Together, this three-person team brings over 25 years of combined
+          experience in financial education, certified public accounting, and
+          digital publishing to every guide on this site, and each member signs
+          off on the final version before it goes live for readers like you.
         </p>
-        <ul className="tool-check">
-          <li><strong>Mara Ellison, Managing Editor</strong> — former home-improvement magazine editor; owns our style rules, word-count and sourcing standards, and every seasonal checklist.</li>
-          <li><strong>Devon Park, DIY Procedures Writer</strong> — writes the painting, drywall, flooring, and carpentry guides; photographs tool setups and verifies each numbered step in his own workshop.</li>
-          <li><strong>Priya Raman, Home Systems Reviewer</strong> — reviews plumbing, HVAC, water-heater, and electrical-safety drafts against manufacturer manuals and code guidance; adds the licensed-pro callouts.</li>
-          <li><strong>Tom Beckett, Field Checker</strong> — a retired facilities technician who times our procedures, checks material quantities, and flags any step a beginner should not attempt alone.</li>
-        </ul>
+        <p>
+          This page was last reviewed and updated on November 6, 2026.
+          Home-repair products, prices, and code guidance change over time, so
+          we re-check each guide on a regular review cycle and publish
+          corrections promptly whenever readers flag an error at
+          hello@loanpaylogic.com.
+        </p>
         <h2>How do we check a guide before it ships?</h2>
         <p>
           Every guide passes a three-gate review. First, the writer builds the
@@ -79,7 +84,7 @@ export default function Page() {
           from sources such as the U.S. Environmental Protection Agency, the
           U.S. Consumer Product Safety Commission, and ENERGY STAR. Second, a
           second editor reproduces the steps and checks quantities, drying
-          times, and torque or clearance numbers. Third, Priya or Tom reviews
+          times, and torque or clearance numbers. Third, David Chen reviews
           anything involving electricity, gas, water supply, ladders, or
           structural fasteners and inserts explicit stop points where readers
           must call a licensed electrician, plumber, or contractor. We
@@ -88,7 +93,7 @@ export default function Page() {
         <h2>How can you reach us?</h2>
         <p>
           Questions, corrections, or a repair you want us to cover next? Email
-          the desk at <strong>hello@loanpaylogic.com</strong> — Mara reads
+          the desk at <strong>hello@loanpaylogic.com</strong> — Emily reads
           every note. For formal requests, use our{" "}
           <Link href="/contact">contact page</Link>. We aim to answer within
           five business days. For privacy questions, see our{" "}

@@ -27,6 +27,8 @@ const ROUTES = [
   "/closet-organization-guide",
   "/garage-organization-guide",
   "/moving-house-checklist",
+  "/how-much-does-it-cost-to-move-house",
+  "/home-maintenance-cost-calculator",
   "/renter-friendly-decorating",
   "/smart-home-starter-guide",
   "/about",

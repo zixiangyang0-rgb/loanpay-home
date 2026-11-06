@@ -158,7 +158,7 @@ export default function Page() {
         internalLinks={[
           { href: "/fall-home-maintenance-checklist", label: "fall checklist" },
           { href: "/spring-home-maintenance-checklist", label: "spring checklist" },
-          { href: "/gutter-cleaning-guide", label: "gutter cleaning guide" },
+          { href: "/how-much-does-it-cost-to-move-house", label: "how much it costs to move house" },
           { href: "/hvac-filter-guide", label: "HVAC filter guide" },
         ]}
         closing={[

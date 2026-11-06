@@ -154,7 +154,7 @@ export default function Page() {
           { href: "/closet-organization-guide", label: "closet organization guide" },
           { href: "/garage-organization-guide", label: "garage organization guide" },
           { href: "/furniture-assembly-tips", label: "furniture assembly tips" },
-          { href: "/smoke-detector-guide", label: "smoke detector guide" },
+          { href: "/how-much-does-it-cost-to-move-house", label: "how much it costs to move house" },
         ]}
         closing={[
           "Purge early, quote thrice, pack labeled, land functional — the four habits that turn moving from crisis into project. The truck day is just the middle; the timeline is the move.",

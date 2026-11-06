@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import Link from "next/link";
+import { OrgJsonLd } from "./components/schema";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -60,6 +61,7 @@ export default function RootLayout({
           crossOrigin="anonymous"
           strategy="lazyOnload"
         />
+        <OrgJsonLd />
         <div className="hazard-bar" aria-hidden="true" />
         <header className="site-header">
           <div className="shop-wrap">

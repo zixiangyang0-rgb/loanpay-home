@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ShopArticle from "@/components/ShopArticle";
+import { GuideSchema } from "@/app/components/schema";
 import { faqJsonLd } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -50,6 +51,12 @@ export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(faqs)).replace(/</g, "\u003c") }} />
+      <GuideSchema
+        title="Painting a Room: DIY Step-by-Step Guide"
+        description="Painting a room the right way means prep, primer, and two patient coats. Compare DIY costs from $100, sheen picks, and dry times. Start your project now!"
+        slug="painting-room-guide"
+        faqs={faqs.map((f) => ({ question: f.q, answer: f.a }))}
+      />
       <div className="hero-bay">
         <span className="kicker">Paint &amp; Walls Bay 01</span>
         <h1>Painting a Room <span className="accent">Like a Pro</span></h1>

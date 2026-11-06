@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Byline } from "@/app/components/schema";
 
 export type Faq = { q: string; a: string };
 export type Step = { title: string; body: string };
@@ -84,6 +85,7 @@ export default function ShopArticle({
   return (
     <>
       <p className="meta-line">{updated} · {sources}</p>
+      <Byline updated={updated.replace(/^Updated:\s*/, "")} />
       <div className="article-shell">
         <p className="kicker" style={{ fontFamily: "Arial,sans-serif", fontSize: 12, fontWeight: 800, letterSpacing: 2, textTransform: "uppercase", color: "#b33c00" }}>{kicker}</p>
         {intro.map((p, i) => (

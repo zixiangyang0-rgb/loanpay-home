@@ -1,14 +1,22 @@
 @import "tailwindcss";
 
+/* Material Workshop V2 — architectural warm stone, hairlines only.
+   Same class names as before so layout/ShopArticle markup is preserved.
+   No hazard stripes, no toy offset shadows, no orange full-bleed CTA. */
+
 :root {
-  --shop-black: #131110;
-  --shop-coal: #1d1a17;
-  --shop-panel: #242019;
-  --shop-line: #3a332b;
-  --shop-orange: #ff6a00;
-  --shop-amber: #ffb000;
-  --shop-bone: #f4ede1;
-  --shop-mute: #b9ad9c;
+  --stone: #f5efe3;
+  --card: #fffdf8;
+  --figure-field: #efe6d2;
+  --line: #dccfb4;
+  --line-strong: #c4b28c;
+  --ink: #2e2a24;
+  --muted: #6b6257;
+  --beam: #8a6d3b;
+  --beam-dark: #6e562e;
+  --beam-ink: #fffdf8;
+  --error: #b42318;
+  --shadow-single: 0 10px 28px -18px rgba(46, 42, 36, 0.25);
 }
 
 * {
@@ -21,11 +29,11 @@ html {
 
 body {
   margin: 0;
-  background: var(--shop-black);
-  color: var(--shop-bone);
-  font-family: "Arial Black", "Archivo Black", Arial, Helvetica, sans-serif;
+  background: var(--stone);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-weight: 400;
-  line-height: 1.7;
+  line-height: 1.65;
 }
 
 body p,
@@ -34,37 +42,46 @@ body td,
 body th,
 body dd,
 body blockquote {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
 
 a {
-  color: var(--shop-amber);
+  color: var(--beam);
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: var(--beam-dark);
+}
+
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--beam);
+  outline-offset: 2px;
 }
 
 .shop-wrap {
   max-width: 1080px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 24px;
 }
 
-/* hazard stripe ribbon */
+/* Former hazard ribbon: now a quiet architectural beam hairline. Markup kept. */
 .hazard-bar {
-  height: 10px;
-  background: repeating-linear-gradient(
-    -45deg,
-    var(--shop-orange) 0 14px,
-    var(--shop-black) 14px 28px
-  );
+  height: 3px;
+  background: var(--beam);
 }
 
 .hazard-bar.thin {
-  height: 6px;
+  height: 2px;
+  background: var(--line-strong);
 }
 
 .site-header {
-  background: var(--shop-coal);
-  border-bottom: 3px solid var(--shop-orange);
+  background: var(--stone);
+  border-bottom: 1px solid var(--line);
 }
 
 .site-header .brand-row {
@@ -81,136 +98,184 @@ a {
   align-items: center;
   gap: 12px;
   text-decoration: none;
-  color: var(--shop-bone);
+  color: var(--ink);
 }
 
 .brand-plate {
-  background: var(--shop-orange);
-  color: #160c00;
-  font-weight: 900;
-  font-size: 22px;
-  letter-spacing: 0.5px;
-  padding: 6px 12px;
-  border: 2px solid #000;
-  box-shadow: 4px 4px 0 #000;
+  background: var(--beam);
+  color: var(--beam-ink);
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 1.5px;
+  padding: 6px 10px;
+  border: 1px solid var(--beam-dark);
   text-transform: uppercase;
 }
 
 .brand-name {
-  font-weight: 900;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 600;
   font-size: 20px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.2px;
 }
 
 .brand-name small {
   display: block;
-  font-family: Arial, sans-serif;
-  font-weight: 700;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 600;
   font-size: 11px;
   letter-spacing: 3px;
-  color: var(--shop-amber);
+  text-transform: uppercase;
+  color: var(--muted);
 }
 
 .site-nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  padding: 0 0 16px;
+  gap: 4px;
+  padding: 0 0 14px;
 }
 
 .site-nav a {
-  font-family: Arial, sans-serif;
-  font-weight: 800;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 600;
   font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 0.6px;
-  color: var(--shop-bone);
+  letter-spacing: 0.4px;
+  color: var(--ink);
   text-decoration: none;
-  border: 2px solid var(--shop-line);
-  background: #2a251e;
-  padding: 8px 12px;
+  border-bottom: 2px solid transparent;
+  padding: 8px 10px;
 }
 
 .site-nav a:hover {
-  border-color: var(--shop-orange);
-  color: var(--shop-amber);
+  border-bottom-color: var(--beam);
+  color: var(--beam-dark);
 }
 
+/* Homepage hero: editorial split — text + verified figure. Finite height. */
 .hero-bay {
-  background: var(--shop-coal);
-  border: 2px solid var(--shop-line);
-  border-top: 8px solid var(--shop-orange);
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--beam);
   padding: 32px 28px;
   margin: 28px 0;
-  box-shadow: 8px 8px 0 #000;
+  box-shadow: var(--shadow-single);
 }
 
 .hero-bay .kicker {
   display: inline-block;
-  font-family: Arial, sans-serif;
   font-size: 12px;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  background: #000;
-  color: var(--shop-amber);
-  border: 1px solid var(--shop-orange);
+  color: var(--beam-dark);
+  border: 1px solid var(--line);
   padding: 5px 10px;
   margin-bottom: 14px;
 }
 
 .hero-bay h1,
 .shop-h1 {
-  font-size: clamp(30px, 5vw, 52px);
-  line-height: 1.02;
-  text-transform: uppercase;
-  font-weight: 900;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(30px, 5vw, 48px);
+  line-height: 1.08;
+  font-weight: 600;
+  letter-spacing: -0.01em;
   margin: 0 0 14px;
-  letter-spacing: -0.5px;
 }
 
 .hero-bay h1 .accent,
 .shop-h1 .accent {
-  color: var(--shop-orange);
+  color: var(--beam-dark);
 }
 
 .lede {
   font-size: 18px;
-  color: var(--shop-bone);
+  line-height: 1.65;
+  color: var(--ink);
   max-width: 68ch;
 }
 
 .meta-line {
-  font-family: Arial, sans-serif;
   font-size: 13px;
-  color: var(--shop-mute);
+  color: var(--muted);
   margin-top: 14px;
 }
 
+/* Material specimen index */
+.mw-index-meta {
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 8px 0 0;
+}
+
+.mw-figure {
+  margin: 24px 0 8px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-single);
+}
+
+.mw-figure-eyebrow {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--beam-dark);
+  padding: 12px 16px 0;
+}
+
+.mw-figure-frame {
+  display: block;
+  margin: 12px 16px 0;
+  border: 1px solid var(--line);
+  overflow: hidden;
+}
+
+.mw-figure-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1200 / 801;
+}
+
+.mw-figcaption {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--muted);
+  padding: 12px 16px 16px;
+}
+
+.mw-figcaption a {
+  color: var(--beam-dark);
+}
+
+/* Guide body */
 .article-shell {
-  background: var(--shop-bone);
-  color: #211b14;
-  border: 2px solid #000;
-  box-shadow: 8px 8px 0 #000;
+  background: var(--card);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-single);
   padding: clamp(20px, 4vw, 44px);
   margin: 24px 0 40px;
 }
 
 .article-shell h2 {
-  font-size: clamp(21px, 3vw, 30px);
-  text-transform: uppercase;
-  font-weight: 900;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(21px, 3vw, 28px);
+  font-weight: 600;
   margin: 38px 0 14px;
   padding-left: 14px;
-  border-left: 10px solid var(--shop-orange);
-  line-height: 1.15;
+  border-left: 3px solid var(--beam);
+  line-height: 1.25;
 }
 
 .article-shell h3 {
-  font-size: 19px;
-  font-weight: 900;
-  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 700;
   margin: 26px 0 10px;
 }
 
@@ -218,39 +283,40 @@ a {
 .article-shell li {
   font-size: 17px;
   line-height: 1.75;
-  color: #2b241c;
+  color: var(--ink);
 }
 
 .article-shell a {
-  color: #b33c00;
-  font-weight: 700;
+  color: var(--beam-dark);
+  font-weight: 600;
 }
 
 .step-grid {
   display: grid;
-  gap: 14px;
+  gap: 12px;
   margin: 18px 0;
 }
 
 .step-card {
   display: grid;
-  grid-template-columns: 72px 1fr;
+  grid-template-columns: 64px 1fr;
   gap: 14px;
-  background: #fff;
-  border: 2px solid #14100c;
+  background: var(--card);
+  border: 1px solid var(--line);
   padding: 16px;
-  box-shadow: 5px 5px 0 #14100c;
 }
 
 .step-num {
-  background: #14100c;
-  color: var(--shop-amber);
-  font-size: 30px;
-  font-weight: 900;
+  background: var(--stone);
+  color: var(--beam-dark);
+  border: 1px solid var(--line);
+  font-variant-numeric: tabular-nums;
+  font-size: 24px;
+  font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 72px;
+  min-height: 64px;
 }
 
 .tool-check {
@@ -262,115 +328,129 @@ a {
 }
 
 .tool-check li {
-  background: #fff;
-  border: 2px solid #14100c;
-  padding: 12px 14px 12px 48px;
-  position: relative;
-  box-shadow: 4px 4px 0 #14100c;
-}
-
-.tool-check li::before {
-  content: "";
-  position: absolute;
-  left: 14px;
-  top: 14px;
-  width: 18px;
-  height: 18px;
-  border: 3px solid #14100c;
-  background: #fff;
-}
-
-.tool-check li::after {
-  content: "✓";
-  position: absolute;
-  left: 16px;
-  top: 9px;
-  font-weight: 900;
-  color: var(--shop-orange);
-  font-size: 18px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--beam);
+  padding: 12px 14px;
 }
 
 .data-table-wrap {
   overflow-x: auto;
   margin: 18px 0;
-  border: 2px solid #14100c;
-  box-shadow: 5px 5px 0 #14100c;
+  border: 1px solid var(--line);
+  max-width: 100%;
+}
+
+/* MaterialWorkshop interior reading scope (additive, per-route opt-in hook).
+   All 27 interiors render through ShopArticle .article-shell.mw-reading with
+   data-workshop="material": warm stone/sans identity, same copy/markup. */
+.mw-reading {
+  scroll-margin-top: 16px;
+}
+
+.mw-reading .kicker.mw-kicker {
+  display: inline-block;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--beam-dark);
+  margin: 0 0 12px;
+}
+
+/* Local scroll cue: absolute overlay inside the wrap only — never adds
+   document width, never moves layout. Keyboard focus ring on the region. */
+.mw-table-scroll {
+  position: relative;
+}
+
+.mw-table-scroll::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 28px;
+  pointer-events: none;
+  background: linear-gradient(to left, rgba(46, 42, 36, 0.22), transparent);
+}
+
+.mw-table-scroll:focus-visible {
+  outline: 2px solid var(--beam);
+  outline-offset: 2px;
 }
 
 table.data-table {
   width: 100%;
   border-collapse: collapse;
-  background: #fff;
-  font-family: Arial, sans-serif;
+  background: var(--card);
   font-size: 15px;
+  font-variant-numeric: tabular-nums;
 }
 
 .data-table th {
-  background: #14100c;
-  color: var(--shop-amber);
-  text-transform: uppercase;
+  background: var(--stone);
+  color: var(--ink);
   font-size: 13px;
-  letter-spacing: 0.8px;
+  letter-spacing: 0.4px;
   padding: 12px;
   text-align: left;
-  border: 1px solid #14100c;
+  border-bottom: 2px solid var(--line-strong);
 }
 
 .data-table td {
   padding: 12px;
-  border: 1px solid #d8cdbb;
+  border-bottom: 1px solid var(--line);
   vertical-align: top;
 }
 
-.data-table tr:nth-child(even) td {
-  background: #faf3e6;
+.data-table tbody tr:hover td {
+  background: var(--stone);
 }
 
+/* Safety + official callouts: scoped readability, pattern preserved */
 .warn-box {
-  background: #14100c;
-  color: var(--shop-bone);
-  border-left: 10px solid var(--shop-orange);
+  background: var(--stone);
+  color: var(--ink);
+  border: 1px solid var(--line-strong);
+  border-left: 4px solid var(--error);
   padding: 18px;
   margin: 20px 0;
-  font-family: Arial, sans-serif;
 }
 
 .warn-box strong {
-  color: var(--shop-amber);
-  text-transform: uppercase;
-  letter-spacing: 0.6px;
+  color: var(--error);
+  letter-spacing: 0.4px;
 }
 
 .official-box {
-  background: #fff;
-  border: 2px solid #14100c;
-  border-left: 10px solid var(--shop-orange);
-  box-shadow: 5px 5px 0 #14100c;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--beam);
   padding: 18px;
   margin: 20px 0;
-  font-family: Arial, sans-serif;
 }
 
 .official-box strong {
-  color: #b33c00;
-  text-transform: uppercase;
-  letter-spacing: 0.6px;
+  color: var(--beam-dark);
+  letter-spacing: 0.4px;
 }
 
 .official-box a {
-  color: #0b5fff;
+  color: var(--beam-dark);
   text-decoration: underline;
 }
 
 .faq-block {
   margin-top: 30px;
-  border-top: 4px solid #14100c;
+  border-top: 1px solid var(--line-strong);
   padding-top: 18px;
 }
 
 .faq-item {
-  background: #fff;
-  border: 2px solid #14100c;
+  background: var(--card);
+  border: 1px solid var(--line);
   margin-bottom: 12px;
   padding: 16px;
 }
@@ -380,6 +460,7 @@ table.data-table {
   font-size: 17px;
 }
 
+/* Specimen cards: hairline, no toy shadow */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -388,66 +469,70 @@ table.data-table {
 }
 
 .work-card {
-  background: var(--shop-panel);
-  border: 2px solid var(--shop-line);
-  border-top: 6px solid var(--shop-orange);
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--beam);
   padding: 18px;
   text-decoration: none;
-  color: var(--shop-bone);
+  color: var(--ink);
   display: block;
-  box-shadow: 6px 6px 0 #000;
+  box-shadow: var(--shadow-single);
+  transition: transform 200ms ease, border-color 150ms ease;
 }
 
 .work-card:hover {
-  border-color: var(--shop-orange);
+  transform: translateY(-2px);
+  border-color: var(--line-strong);
 }
 
 .work-card .card-tag {
-  font-family: Arial, sans-serif;
   font-size: 11px;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 2px;
-  color: var(--shop-amber);
+  color: var(--beam-dark);
   text-transform: uppercase;
 }
 
 .work-card h3 {
+  font-family: Georgia, "Times New Roman", serif;
   margin: 8px 0;
   font-size: 19px;
-  text-transform: uppercase;
-  line-height: 1.2;
-  color: var(--shop-bone);
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--ink);
 }
 
 .work-card p {
-  font-family: Arial, sans-serif;
   font-size: 14px;
-  color: var(--shop-mute);
+  color: var(--muted);
   margin: 0;
 }
 
 .section-title {
-  font-size: clamp(22px, 3.4vw, 32px);
-  text-transform: uppercase;
-  font-weight: 900;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(22px, 3.4vw, 30px);
+  font-weight: 600;
   margin: 34px 0 6px;
 }
 
 .section-title span {
-  background: var(--shop-orange);
-  color: #160c00;
-  padding: 2px 10px;
-  border: 2px solid #000;
-  box-shadow: 4px 4px 0 #000;
+  background: var(--stone);
+  color: var(--beam-dark);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 4px 10px;
+  border: 1px solid var(--line-strong);
   margin-right: 10px;
+  vertical-align: middle;
 }
 
 .site-footer {
-  background: #0c0a08;
-  border-top: 3px solid var(--shop-orange);
+  background: var(--stone);
+  border-top: 1px solid var(--line-strong);
   margin-top: 40px;
   padding: 26px 0 34px;
-  font-family: Arial, sans-serif;
 }
 
 .site-footer nav {
@@ -458,17 +543,45 @@ table.data-table {
 }
 
 .site-footer nav a {
-  color: var(--shop-mute);
+  color: var(--muted);
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 600;
   text-decoration: none;
 }
 
 .site-footer nav a:hover {
-  color: var(--shop-amber);
+  color: var(--beam-dark);
 }
 
 .site-footer p {
-  color: #8a7f70;
+  color: var(--muted);
   font-size: 13px;
+}
+
+@media (max-width: 768px) {
+  .shop-wrap {
+    padding: 0 16px;
+  }
+
+  .hero-bay {
+    padding: 24px 20px;
+  }
+
+  .mw-figure-frame {
+    margin: 12px 12px 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .work-card {
+    transition: none;
+  }
+
+  .work-card:hover {
+    transform: none;
+  }
 }

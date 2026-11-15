@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Script from "next/script";
+import MaterialFigure, { HOME_FIGURE } from "@/components/MaterialFigure";
+
+const HOME_IMAGE_URL = `https://home.loanpaylogic.com${HOME_FIGURE.src}`;
 
 export const metadata: Metadata = {
   title: "LoanPay Home: DIY Repair & Upkeep Guides",
@@ -13,14 +17,64 @@ export const metadata: Metadata = {
     title: "LoanPay Home: DIY Repair & Upkeep Guides",
     description:
       "25 hands-on DIY guides for painting, tools, plumbing, electrical safety, outdoor care, and seasonal upkeep.",
+    images: [
+      {
+        url: HOME_IMAGE_URL,
+        width: HOME_FIGURE.width,
+        height: HOME_FIGURE.height,
+        alt: HOME_FIGURE.alt,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "LoanPay Home: DIY Repair & Upkeep Guides",
     description:
       "25 hands-on DIY guides for painting, tools, plumbing, electrical safety, outdoor care, and seasonal upkeep.",
+    images: [HOME_IMAGE_URL],
   },
 };
+
+function HomeHeroImageJsonLd() {
+  const json = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://home.loanpaylogic.com/#webpage",
+        url: "https://home.loanpaylogic.com",
+        name: "LoanPay Home: DIY Repair & Upkeep Guides",
+        primaryImageOfPage: {
+          "@id": `${HOME_IMAGE_URL}#image`,
+        },
+      },
+      {
+        "@type": "ImageObject",
+        "@id": `${HOME_IMAGE_URL}#image`,
+        url: HOME_IMAGE_URL,
+        contentUrl: HOME_IMAGE_URL,
+        width: HOME_FIGURE.width,
+        height: HOME_FIGURE.height,
+        caption: HOME_FIGURE.alt,
+        creator: {
+          "@type": "Person",
+          name: "Shixart1985",
+        },
+        creditText: HOME_FIGURE.creditName,
+        license: HOME_FIGURE.licenseHref,
+        acquireLicensePage: HOME_FIGURE.creditHref,
+      },
+    ],
+  };
+  return (
+    <Script
+      id="home-hero-image-jsonld"
+      type="application/ld+json"
+      strategy="afterInteractive"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(json) }}
+    />
+  );
+}
 
 type Card = { href: string; title: string; blurb: string };
 type Bay = { tag: string; name: string; intro: string; cards: Card[] };
@@ -87,6 +141,8 @@ const BAYS: Bay[] = [
       { href: "/spring-home-maintenance-checklist", title: "Spring Maintenance Checklist", blurb: "Roof-to-lawn damage patrol, AC commissioning, and pest exclusion timing." },
       { href: "/fall-home-maintenance-checklist", title: "Fall Maintenance Checklist", blurb: "Heat tuning, freeze-proofing, gutter clearing, and rodent sealing before cold." },
       { href: "/moving-house-checklist", title: "Moving House Without Chaos", blurb: "8-week timeline, binding quotes, room-labeled packing, and night-one setup." },
+      { href: "/how-much-does-it-cost-to-move-house", title: "How Much Does It Cost to Move House", blurb: "Local versus long-distance ranges by size, miles, and season with quote tips." },
+      { href: "/home-maintenance-cost-calculator", title: "Home Maintenance Cost Calculator", blurb: "Yearly upkeep budgeting with seasonal splits and reserve habits." },
     ],
   },
   {
@@ -104,6 +160,7 @@ const BAYS: Bay[] = [
 export default function Page() {
   return (
     <>
+      <HomeHeroImageJsonLd />
       <div className="hero-bay">
         <span className="kicker">Workshop manual · 25 guides</span>
         <h1 className="shop-h1">
@@ -117,17 +174,19 @@ export default function Page() {
           and start with the job in front of you.
         </p>
         <p className="meta-line">Updated: October 2026 · Sources: editorial team, manufacturer manuals, U.S. agency guidance</p>
+        <p className="mw-index-meta">Material specimen index · 6 bays · 27 guides</p>
       </div>
+      <MaterialFigure />
       {BAYS.map((bay) => (
-        <section key={bay.name} aria-label={bay.name}>
+        <section key={bay.name} aria-label={bay.name} data-specimen-bay={bay.tag}>
           <h2 className="section-title">
             <span>{bay.tag}</span>
             {bay.name}
           </h2>
-          <p style={{ fontFamily: "Arial,sans-serif", color: "#b9ad9c", maxWidth: "72ch" }}>{bay.intro}</p>
-          <div className="card-grid">
+          <p style={{ color: "#6b6257", maxWidth: "72ch" }}>{bay.intro}</p>
+          <div className="card-grid" role="list" aria-label={`${bay.name} guides`}>
             {bay.cards.map((c) => (
-              <Link key={c.href} href={c.href} className="work-card">
+              <Link key={c.href} href={c.href} className="work-card" role="listitem" data-specimen={c.href.replace(/^\//, "")}>
                 <span className="card-tag">{bay.name}</span>
                 <h3>{c.title}</h3>
                 <p>{c.blurb}</p>

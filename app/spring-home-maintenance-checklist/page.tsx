@@ -155,6 +155,7 @@ export default function Page() {
           { href: "/gutter-cleaning-guide", label: "gutter cleaning guide" },
           { href: "/lawn-care-basics", label: "lawn care basics" },
           { href: "/hvac-filter-guide", label: "HVAC filter guide" },
+          { href: "/home-maintenance-cost-calculator", label: "home maintenance cost calculator" },
         ]}
         closing={[
           "Two spring weekends — roof to lawn, water paths to detectors — buy a summer of quiet systems and a fall checklist that starts ahead instead of behind. Log it all; next spring thanks you.",

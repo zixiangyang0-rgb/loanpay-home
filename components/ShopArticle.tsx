@@ -32,7 +32,12 @@ export function FaqJsonLd({ faqs }: { faqs: Faq[] }) {
 
 export function DataTable({ table }: { table: TableData }) {
   return (
-    <div className="data-table-wrap">
+    <div
+      className="data-table-wrap mw-table-scroll"
+      tabIndex={0}
+      role="region"
+      aria-label="Scrollable data table — swipe or scroll horizontally to see all columns"
+    >
       <table className="data-table">
         <thead>
           <tr>
@@ -86,8 +91,8 @@ export default function ShopArticle({
     <>
       <p className="meta-line">{updated} · {sources}</p>
       <Byline updated={updated.replace(/^Updated:\s*/, "")} />
-      <div className="article-shell">
-        <p className="kicker" style={{ fontFamily: "Arial,sans-serif", fontSize: 12, fontWeight: 800, letterSpacing: 2, textTransform: "uppercase", color: "#b33c00" }}>{kicker}</p>
+      <div className="article-shell mw-reading" data-workshop="material">
+        <p className="kicker mw-kicker">{kicker}</p>
         {intro.map((p, i) => (
           <p key={i}>{p}</p>
         ))}
@@ -95,7 +100,7 @@ export default function ShopArticle({
           <div className="warn-box" role="note">
             <strong>Safety first. </strong>
             {safety}{" "}
-            <Link href="/disclaimer" style={{ color: "#ffb000" }}>
+            <Link href="/disclaimer">
               Read our disclaimer
             </Link>
             .

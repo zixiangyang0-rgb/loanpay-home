@@ -44,5 +44,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date("2026-10-01"),
     changeFrequency: r === "" ? "weekly" : "monthly",
     priority: r === "" ? 1 : r.startsWith("/painting") ? 0.9 : 0.8,
+    ...(r === "" ? { images: [`${BASE}/photos/home.webp`] } : {}),
   }));
 }
